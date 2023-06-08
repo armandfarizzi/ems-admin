@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { NgIconComponent, NgIconsModule } from '@ng-icons/core';
-import { featherBriefcase, featherStar, featherHome } from "@ng-icons/feather-icons";
+import { featherBriefcase, featherStar, featherHome, featherRotateCcw } from "@ng-icons/feather-icons";
 
 @NgModule({
   declarations: [],
@@ -12,7 +12,7 @@ import { featherBriefcase, featherStar, featherHome } from "@ng-icons/feather-ic
   ],
   imports: [
     CommonModule,
-    NgIconsModule.withIcons({ featherBriefcase, featherStar, featherHome }),
+    NgIconsModule.withIcons({ featherBriefcase, featherStar, featherHome, featherRotateCcw }),
   ]
 })
 export class IconModule { }

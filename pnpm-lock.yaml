@@ -1,4 +1,8 @@
-lockfileVersion: '6.0'
+lockfileVersion: '6.1'
+
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false
 
 dependencies:
   '@angular/animations':
@@ -31,9 +35,21 @@ dependencies:
   '@ng-icons/feather-icons':
     specifier: ^25.1.0
     version: 25.1.0
+  '@ngrx/store':
+    specifier: ^16.0.1
+    version: 16.0.1(@angular/core@16.0.0)(rxjs@7.8.0)
+  '@ngrx/store-devtools':
+    specifier: ^16.0.1
+    version: 16.0.1(@ngrx/store@16.0.1)(rxjs@7.8.0)
   autoprefixer:
     specifier: ^10.4.14
     version: 10.4.14(postcss@8.4.24)
+  immer:
+    specifier: ^10.0.2
+    version: 10.0.2
+  ngrx-immer:
+    specifier: ^2.0.1
+    version: 2.0.1(@ngrx/store@16.0.1)(immer@10.0.2)
   postcss:
     specifier: ^8.4.24
     version: 8.4.24
@@ -2009,6 +2025,28 @@ packages:
   /@ng-icons/feather-icons@25.1.0:
     resolution: {integrity: sha512-beCMglZuvFErwGeM2chQF7H1xYK+Y1TnMJyMGUPnWLz+1A2gQkxmK5rlczX5saLNfZF+DlN2oGjauiH9Nc66/A==}
     dependencies:
+      tslib: 2.5.0
+    dev: false
+
+  /@ngrx/store-devtools@16.0.1(@ngrx/store@16.0.1)(rxjs@7.8.0):
+    resolution: {integrity: sha512-fOk/etV2ldgPgy3BD7v0yK4ocsxNUx7iktjMOVSvfPY/eg6KsfUy0ObQ2/kJasan32wN9rADCVRD6PzLg1Zo8g==}
+    peerDependencies:
+      '@ngrx/store': 16.0.1
+      rxjs: ^6.5.3 || ^7.5.0
+    dependencies:
+      '@ngrx/store': 16.0.1(@angular/core@16.0.0)(rxjs@7.8.0)
+      rxjs: 7.8.0
+      tslib: 2.5.0
+    dev: false
+
+  /@ngrx/store@16.0.1(@angular/core@16.0.0)(rxjs@7.8.0):
+    resolution: {integrity: sha512-KkYzF3j29qKOzHcmiArRJgT+ABLqbddj1DuxerNq3A8zWnTDdC4YgNpDOKru8hQWb3pQ77ZbglLati5K9F8HnQ==}
+    peerDependencies:
+      '@angular/core': ^16.0.0
+      rxjs: ^6.5.3 || ^7.5.0
+    dependencies:
+      '@angular/core': 16.0.0(rxjs@7.8.0)(zone.js@0.13.0)
+      rxjs: 7.8.0
       tslib: 2.5.0
     dev: false
 
@@ -4248,6 +4286,10 @@ packages:
     dev: true
     optional: true
 
+  /immer@10.0.2:
+    resolution: {integrity: sha512-Rx3CqeqQ19sxUtYV9CU911Vhy8/721wRFnJv3REVGWUmoAcIwzifTsdmJte/MV+0/XpM35LZdQMBGkRIoLPwQA==}
+    dev: false
+
   /immutable@4.3.0:
     resolution: {integrity: sha512-0AOCmOip+xgJwEVTQj1EfiDDOkPmuyllDuTuEX+DDXUgapLAsBIfkg3sxCYyCEA8mQqZrrxPUGjcOQ2JS3WLkg==}
     dev: true
@@ -5129,6 +5171,23 @@ packages:
   /neo-async@2.6.2:
     resolution: {integrity: sha512-Yd3UES5mWCSqR+qNT93S3UoYUkqAZ9lLg8a7g9rimsWmYGK8cVToA4/sF3RrshdyV3sAGMXVUmpMYOw+dLpOuw==}
     dev: true
+
+  /ngrx-immer@2.0.1(@ngrx/store@16.0.1)(immer@10.0.2):
+    resolution: {integrity: sha512-rAyYeO5Rukg7agoVJGwVtxy7YkJ1FZpRHUrdzUMfE3oQQT84P2phxY4F0KFsgZ1kJNq76MRbVIdBqH+XolBtUA==}
+    peerDependencies:
+      '@ngrx/component-store': '>=13.0.0'
+      '@ngrx/store': '>=13.0.0'
+      immer: '>=7.0.0'
+    peerDependenciesMeta:
+      '@ngrx/component-store':
+        optional: true
+      '@ngrx/store':
+        optional: true
+    dependencies:
+      '@ngrx/store': 16.0.1(@angular/core@16.0.0)(rxjs@7.8.0)
+      immer: 10.0.2
+      tslib: 2.5.0
+    dev: false
 
   /nice-napi@1.0.2:
     resolution: {integrity: sha512-px/KnJAJZf5RuBGcfD+Sp2pAKq0ytz8j+1NehvgIGFkvtvFrDM3T8E4x/JJODXK9WZow8RRGrbA9QQ3hs+pDhA==}
