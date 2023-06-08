@@ -1,0 +1,63 @@
+<div
+    class="w-[280px] overflow-y-auto fixed bg-gradient-to-b from-cyan-950 to-purple-950 text-gray-400 py-5 h-full transition-[width]">
+    <!-- side bar layout -->
+    <div class="h-full flex flex-col">
+        <!-- side bar header -->
+        <div class="mb-[1rem] px-5">
+            <div class="flex items-center py-[1rem]">
+                <span
+                    class="text-white p-2 flex flex-col items-center justify-center font-bold bg-blue-400 rounded-md w-[35px] h-[35px] ">E</span>
+                <p class="ml-2 inline font-semibold text-xl text-white">EMS Admin</p>
+            </div>
+        </div>
+        <!-- side bar content -->
+        <div>
+            <nav>
+                <ul class="list-none">
+                    <li class="px-5 py-2">
+                        <span class="uppercase text-white font-bold text-xs font-sans tracking-[1.5px]">menu</span>
+                    </li>
+                    <li class="px-5 py-2 hover:bg-zinc-300 cursor-pointer hover:text-gray-600" [ngClass]="{
+                            'bg-zinc-600 text-white': isRouteActiveByPath('')
+                        }">
+                        <div>
+                            <span class="flex items-center">
+                                <ng-icon class="mr-2" name="featherHome"></ng-icon> Home
+                            </span>
+                        </div>
+                    </li>
+                    <li class="px-5 py-2 hover:bg-zinc-300 cursor-pointer hover:text-gray-600">
+                        <div>
+                            <span class="flex items-center">
+                                <ng-icon class="mr-2" name="featherBriefcase"></ng-icon> Departments
+                            </span>
+                        </div>
+                    </li>
+                    <li class="px-5 py-2 hover:bg-zinc-300 cursor-pointer hover:text-gray-600">
+                        <div>
+                            <span class="flex items-center">
+                                <ng-icon class="mr-2" name="featherStar"></ng-icon> Reviews
+                            </span>
+                        </div>
+                    </li>
+                    <li class="translate-x-[10%] h-[1px] w-[80%] bg-gray-500">
+                        <!-- <span class=""></span> -->
+                    </li>
+                    <li class="px-5 py-2">
+                        <span class="uppercase text-white font-bold text-xs font-sans tracking-[1.5px]">extra</span>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+        <!-- side bar footer -->
+        <div class="text-xs flex flex-col px-5 mt-auto">
+            <p class="inline-block">Made with</p>
+            <ul class="font-semibold tracking-wider">
+                <li>@angular</li>
+                <li>@ng-icons</li>
+                <li>Tailwind</li>
+            </ul>
+        </div>
+    </div>
+</div>
