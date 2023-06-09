@@ -35,6 +35,9 @@ dependencies:
   '@ng-icons/feather-icons':
     specifier: ^25.1.0
     version: 25.1.0
+  '@ngrx/effects':
+    specifier: ^16.0.1
+    version: 16.0.1(@angular/core@16.0.0)(@ngrx/store@16.0.1)(rxjs@7.8.0)
   '@ngrx/store':
     specifier: ^16.0.1
     version: 16.0.1(@angular/core@16.0.0)(rxjs@7.8.0)
@@ -50,6 +53,9 @@ dependencies:
   ngrx-immer:
     specifier: ^2.0.1
     version: 2.0.1(@ngrx/store@16.0.1)(immer@10.0.2)
+  ngx-mask:
+    specifier: ^16.1.3
+    version: 16.1.3(@angular/common@16.0.0)(@angular/core@16.0.0)(@angular/forms@16.0.0)
   postcss:
     specifier: ^8.4.24
     version: 8.4.24
@@ -2025,6 +2031,19 @@ packages:
   /@ng-icons/feather-icons@25.1.0:
     resolution: {integrity: sha512-beCMglZuvFErwGeM2chQF7H1xYK+Y1TnMJyMGUPnWLz+1A2gQkxmK5rlczX5saLNfZF+DlN2oGjauiH9Nc66/A==}
     dependencies:
+      tslib: 2.5.0
+    dev: false
+
+  /@ngrx/effects@16.0.1(@angular/core@16.0.0)(@ngrx/store@16.0.1)(rxjs@7.8.0):
+    resolution: {integrity: sha512-hpmON8p7kT44jIiruLBy3raFkYhNzQ45was0puKPkGhv41VrAoo44UcEn4Aysdx5yHaJc/CMCtI/+emFIpqgGA==}
+    peerDependencies:
+      '@angular/core': ^16.0.0
+      '@ngrx/store': 16.0.1
+      rxjs: ^6.5.3 || ^7.5.0
+    dependencies:
+      '@angular/core': 16.0.0(rxjs@7.8.0)(zone.js@0.13.0)
+      '@ngrx/store': 16.0.1(@angular/core@16.0.0)(rxjs@7.8.0)
+      rxjs: 7.8.0
       tslib: 2.5.0
     dev: false
 
@@ -5186,6 +5205,19 @@ packages:
     dependencies:
       '@ngrx/store': 16.0.1(@angular/core@16.0.0)(rxjs@7.8.0)
       immer: 10.0.2
+      tslib: 2.5.0
+    dev: false
+
+  /ngx-mask@16.1.3(@angular/common@16.0.0)(@angular/core@16.0.0)(@angular/forms@16.0.0):
+    resolution: {integrity: sha512-PRubAH7nav8Po44EBU4iVpbJo1TTZhyCfKDu71H6k5fJ//gdS+Y5r/CKbVga1RdtzCOZwXNkun44uHLaLjSoLw==}
+    peerDependencies:
+      '@angular/common': '>=14.0.0'
+      '@angular/core': '>=14.0.0'
+      '@angular/forms': '>=14.0.0'
+    dependencies:
+      '@angular/common': 16.0.0(@angular/core@16.0.0)(rxjs@7.8.0)
+      '@angular/core': 16.0.0(rxjs@7.8.0)(zone.js@0.13.0)
+      '@angular/forms': 16.0.0(@angular/common@16.0.0)(@angular/core@16.0.0)(@angular/platform-browser@16.0.0)(rxjs@7.8.0)
       tslib: 2.5.0
     dev: false
 

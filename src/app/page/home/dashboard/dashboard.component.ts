@@ -1,20 +1,22 @@
-import { clearForm, fillForm } from '@/store/auth/auth.actions';
+import { clearForm, fillForm, submitForm } from '@/store/auth/auth.actions';
 import { AppState, selectKey, selectPassword } from '@/store/auth/auth.selector';
 import { Component } from '@angular/core';
 import { Store } from '@ngrx/store';
-import { Observable } from 'rxjs';
+import { Observable, map } from 'rxjs';
 
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
 })
 export class DashboardComponent {
-  focus: string = ""
+  rotate = false;
+  k: string = ""
+  focus: string = "";
   key$: Observable<string>;
   password$: Observable<string>;
 
   constructor(private store: Store<AppState>) {
-    this.key$ = store.select(selectKey);
+    this.key$ = store.select(selectKey)
     this.password$ = store.select(selectPassword);
   }
 
@@ -36,4 +38,17 @@ export class DashboardComponent {
     this.store.dispatch(clearForm());
   }
 
+
+  rotateBtn() {
+    this.rotate = true;
+  }
+
+  unRotateBtn() {
+    this.rotate = false;
+  }
+
+  submit($event: MouseEvent) {
+    $event.preventDefault();
+    this.store.dispatch(submitForm());
+  }
 }

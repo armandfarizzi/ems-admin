@@ -16,9 +16,10 @@
                             <div class="absolute bottom-0 border-b-[1.5px] border-b-zinc-600 transition-[width] duration-500"
                                 [ngClass]="{'w-full': focus === 'key', 'w-0': focus !== 'key'}">
                             </div>
-                            <input [value]="key$ | async" (input)="updateForm($event)" (focusout)="focusOut()"
-                                (focus)="focusFormKey('key')" type="text" name="key" id="key" placeholder="key-****"
-                                class="py-1 w-full block focus-visible:outline-none">
+                            <input mask="AAAA-QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ" [(ngModel)]="k"
+                                [hiddenInput]="true" (focusout)="focusOut()" (focus)="focusFormKey('key')" type="text"
+                                name="key" id="key" placeholder="key-****"
+                                class="bg-zinc-100 p-2 w-full block focus-visible:outline-none">
                         </div>
                     </div>
                     <div class="my-[1.5rem] px-2">
@@ -30,15 +31,16 @@
                             <input [value]="password$ | async" (input)="updateForm($event)" (focusout)="focusOut()"
                                 (focus)="focusFormKey('password')" type="password" name="password"
                                 placeholder="Password" id="password"
-                                class="py-1 w-full block focus-visible:outline-none">
+                                class="bg-zinc-100 p-2 w-full block focus-visible:outline-none">
                         </div>
                     </div>
                     <div class="my-[1.5rem] px-2 flex">
-                        <button (click)="clearForm()"
-                            class="flex self-stretch items-center w-[48px] justify-center bg-cyan-800 text-white p-3">
-                            <ng-icon class="inline" name="featherRotateCcw"></ng-icon>
+                        <button (click)="clearForm()" (mouseenter)="rotateBtn()" (mouseleave)="unRotateBtn()"
+                            class="flex self-stretch items-center w-[48px] justify-center bg-cyan-800 text-white">
+                            <ng-icon [ngClass]="{'-rotate-[400deg]': rotate}" class="transition-transform duration-500"
+                                name="featherRotateCcw"></ng-icon>
                         </button>
-                        <button
+                        <button (click)="submit($event)"
                             class="uppercase border-0 w-full tracking-wider font-sans bg-cyan-950 text-white p-3">Sign
                             In</button>
                     </div>

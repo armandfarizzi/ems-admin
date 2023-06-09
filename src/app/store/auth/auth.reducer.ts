@@ -1,6 +1,6 @@
 import { createFeatureSelector, createSelector, on } from "@ngrx/store"
 import { createImmerReducer } from 'ngrx-immer/store';
-import { clearForm, fillForm } from "./auth.actions"
+import { clearForm, fillForm, submitFormSuccess } from "./auth.actions"
 import { AuthFeatureState } from "./auth.selector";
 
 
@@ -11,6 +11,10 @@ const initialState: AuthFeatureState = {
 
 export const reducer = createImmerReducer(
     initialState,
+    on(submitFormSuccess, (state, action) => {
+        console.log("it is action success!", action)
+        return state;
+    }),
     on(fillForm, (state, action) => {
         if (action.field)
             state[action.field] = action.value;
